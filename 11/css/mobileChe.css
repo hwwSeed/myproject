@@ -1,0 +1,602 @@
+/*模态框公共样式*/
+.modal-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .4);
+    z-index: 20;
+}
+
+.modal-wrapper {
+    margin: 4.8rem auto 0;
+    width: 6.7rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+    border-radius: 6px;
+    outline: 0;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    background-clip: padding-box;
+    /*  opacity: 0.1;
+      filter: alpha(opacity=50);
+      -webkit-transition: opacity .15s linear;
+      transition: opacity .15s linear;*/
+}
+
+/*模态框公共样式结束*/
+/*支付成功模态框样式*/
+.pay_tip_inner {
+    text-align: center;
+    padding: 0.4rem 0 0.32rem 0;
+    color: #ffffff;
+}
+
+.pay_tip_inner .modal-desc {
+    margin-top: 0.2rem;
+}
+
+.modal-desc p.opera_tip {
+    font-size: 0.3rem;
+    line-height: 0.8rem;
+
+}
+
+.modal-desc p.detail_tip {
+    font-size: 0.24rem;
+
+}
+
+.footer_wrapper .footer_btn {
+    display: block;
+    margin: 0.22rem auto;
+    width: 2.3rem;
+    border-radius: 33px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.28rem;
+    padding: 0.18rem 0px;
+    font-weight: bold;
+}
+
+.footer_wrapper .footer_btn.index_btn, #pay_success_modal .pay_tip_inner {
+    background-color: #00adee;
+}
+
+.footer_wrapper .footer_btn.repay_btn, #pay_fail_modal .pay_tip_inner {
+    background-color: #ffb600;
+}
+
+#wx_code_modal .wx_code_inner {
+    color: #333333;
+    text-align: center;
+    padding: 0.44rem 0 0.4rem  0;
+}
+
+/*微信扫码支付*/
+
+/********************************/
+
+/*动画*/
+/*从上向下移入*/
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        -ms-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none
+    }
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    animation-duration: 1s;
+    -webkit-animation: fadeInDown 1s ease 0s 1 both;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: initial;
+    animation-fill-mode: both;
+    animation-play-state: initial;
+    -webkit-animation-play-state: initial;
+}
+
+
+
+
+
+#mainContainer {
+    background-color: #f2f4f5;
+}
+
+
+#mainContainer .inner {
+    padding: 1.5rem 0 1.6rem 0;
+    width: 7.1rem;
+    margin: 0 auto;
+}
+#mainContainer .inner .pay_page {
+    box-shadow: 0px 0px 10px #c1c1c1;
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 0.28rem 0.15rem 0.3rem 0.20rem;
+}
+
+.pay_page .pay-item {
+    color: #999999;
+    font-size: 0.24rem;
+    margin-bottom: 0.3rem;
+}
+
+.pay_page .pay-item label {
+    font-size: 0.3rem;
+}
+
+.pay_page .pay-item.order_num label {
+    font-size: 0.24rem;
+}
+
+.pay_page .recharge_money  label {
+    float: left;
+    margin-top: 0.1rem;
+    display: block;
+}
+.pay_page .recharge_money .card_recharge .desc{
+    float: right;
+    width: 4.9rem;
+    line-height: 0.5rem;
+    margin-left: 0.35rem;
+}
+.pay_page .recharge_money .card_recharge{
+    margin-bottom: 0.35rem;
+}
+.recharge_money .value{
+    margin-bottom: 0.7rem;
+}
+.recharge_money .value .money_num{
+    color: #ff4d05;
+    font-size: 0.5rem;
+    float: left;
+    margin-left: 1.34rem;
+}
+.recharge_money .value .money_num i{
+    font-size: 0.24rem;
+    font-style: normal;
+}
+.pay_method .method_list{
+    margin: 0.27rem 0;
+}
+.pay_method .method_list .method-item{
+    float: left;
+    padding-right: 0.4rem;
+}
+.method_list .method-item .radio_icon {
+    display: inline-block;
+    float: left;
+    margin-top: 0.16rem;
+    width: 0.3rem;
+    height: 0.3rem;
+    cursor: pointer;
+    background: url("../img/pay_unck.png") center no-repeat;
+    background-size: contain;
+}
+
+.method_list .method-item .radio_icon.ck {
+    background: url("../img/pay_ck.png") center  no-repeat;
+    background-size: contain;
+}
+.method_list .method-item img {
+    vertical-align: middle;
+    padding: 0.12rem 0.15rem;
+    border: 1px solid #e5e5e5;
+    margin-left: 0.14rem;
+}
+.pay_page .confirm_btn {
+    width: 100%;
+    display: block;
+    color: #ffffff;
+    font-size: 0.3rem;
+    line-height: 0.3rem;
+    padding: 0.28rem 0;
+    text-align: center;
+    background-color: #ffb600;
+    font-weight: bolder;
+}
+/*手机车宝协议*/
+
+#mainContainer .inner .cbProtocol_page {
+    box-shadow: 0px 0px 10px #c1c1c1;
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 0.28rem 0.2rem 0.35rem 0.2rem;
+
+}
+#mainContainer .inner .cbProtocol_page .protocol_title {
+    text-align: center;
+    font-size: 0.3rem;
+    color: #000;
+    margin-bottom: 0.45rem;
+}
+
+#mainContainer .inner .cbProtocol_page .proto_item {
+    margin-bottom: 0.25rem;
+}
+
+.cbProtocol_page .proto_item h5 {
+    color: #333333;
+    font-size: 0.24rem;
+    margin-bottom: 0.15rem;
+    font-weight: normal;
+}
+
+.cbProtocol_page .proto_item p {
+    font-size: 0.24rem;
+    color: #666666;
+    line-height: 0.5rem;
+}
+
+/***************************************/
+/*宣传页面*/
+.propaganda {
+    position: relative;
+}
+
+.propaganda .section_inner {
+    width: 7.1rem;
+    margin: 0 auto;
+    position: relative;
+}
+.propaganda .section_inner i{
+    font-style: normal;
+}
+.propaganda .section_inner {
+    padding-top: 0.95rem;
+    font-weight: 100;
+}
+
+.section_inner .section_info .co_text {
+    margin-bottom: 0.15rem;
+}
+
+.propaganda #section0 {
+    height: 6.63rem;
+    background: url("../img/section1_bg.png") center no-repeat;
+    background-size: cover;
+}
+
+.propaganda #section1 {
+    height:6.6rem;
+    background: url("../img/section2_bg.png") right no-repeat;
+    background-size: cover;
+}
+
+/*.propaganda #section2 {
+    background: url("../img/section3_bg.png") right no-repeat;
+    background-size: contain;
+}*/
+.section_inner .section_info .sp_text {
+    font-size: 0.46rem;
+    color: #333333;
+    margin-bottom: 0.3rem;
+}
+
+.section_inner .section_info .co_text {
+    font-size: 0.26rem;
+    color: #666666;
+}
+
+.section_inner .section_info .co_text_detail {
+    font-size: 0.24rem;
+    color: #999999;
+}
+
+/*section1*/
+#section1 .section_info{
+    width: 3.5rem;
+    margin: 0 auto;
+}
+#section1 .section_info .sp_text span {
+    color: #ffcf03;
+    font-size: 0.82rem;
+}
+/*section2*/
+#section2 {
+    background-color: #e7faff;
+    text-align: center;
+}
+
+#section2 .section_inner {
+    padding: 0.9rem 0 0.3rem  0;
+}
+
+#section2 .section_inner .section_info i{
+    font-size: 0.28rem;
+    font-weight: bold;
+    font-style: normal;
+}
+#section2 .section_info .co_text {
+    color: #999999;
+    margin-bottom: 0.4rem;
+}
+/*section3*/
+#section3{
+    text-align: center;
+    background-size: contain;
+    background: url("../img/section4_bg.png") bottom no-repeat;
+    background-size: 6.72rem 3rem;
+    background-color: #fff4e7;
+
+}
+#section3 .section_info{
+    padding-bottom: 4rem;
+}
+#section3 .section_info .sp_text span {
+    color: #2a566d;
+    font-size: 0.54rem;
+
+}
+/*section4*/
+#section4 {
+    height: 6.6rem;
+    background: url("../img/section5_bg.png") center no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+#section4 .section_inner {
+    padding-top: 0.65rem
+}
+#section4 .section_inner .co_text {
+    margin-bottom: 0;
+}
+#section4 .section_inner img {
+    margin-top: 0.5rem
+}
+/*section5*/
+#section5 .section_inner{
+    padding: 0.7rem 0;
+}
+#section5 .img_list{
+    width: 6.7rem;
+    margin: 0 auto;
+}
+.img_list .arrow-left {
+    background: url("../img/left_arrow.png") center no-repeat;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    margin-top: -15px;
+    width: 0.4rem;
+    height: 0.8rem;
+    background-color: #b2b2b2;
+    background-size: 0.13rem 0.24rem;
+}
+.img_list .arrow-right {
+    background: url("../img/right_arrow.png")center no-repeat;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -15px;
+    width: 0.4rem;
+    height: 0.8rem;
+    background-color: #b2b2b2;
+    background-size: 0.13rem 0.24rem;
+}
+.swiper-slide .img_inner {
+    overflow: hidden;
+    width: 3.82rem;
+    margin: 0 auto;
+    height:5.2rem;
+    -webkit-transition: box-shadow 200ms ease-in-out;
+    -moz-transition: box-shadow 200ms ease-in-out;
+    transition: box-shadow 200ms ease-in-out;
+}
+.swiper-slide .img_inner img{
+    width: 3.8rem;
+}
+.img_inner:hover{
+    box-shadow: 0px 0px 10px #c1c1c1;
+}
+.swiper-slide .img_inner .img_desc {
+    position: relative;
+    color: #615c85;
+    text-align: center;
+    background-color: #f2f4f5;
+    width: 3.8rem;
+    margin: 0 auto;
+    line-height:0.4rem;
+    padding:0.15rem 0;
+}
+.swiper-slide .img_inner .img_desc:hover{
+    background-color: #ffcf03;
+    color: #333333;
+}
+.upAnimation:hover img{}
+.upAnimation:hover img{;}
+
+.swiper-slide .img_inner .img_desc .detail_desc{
+    position: absolute;
+    display: none;
+    bottom: -20px;
+    font-size: 0.24rem;
+    color: #999999;
+    padding: 0.44rem 0.15rem;
+    background-color: #ffffff;
+    opacity: 0.9;
+
+}
+.swiper-slide .img_desc:hover .detail_desc{
+    display: block;
+    bottom: 16px;
+    transform:translate(0,-15px);-webkit-transform:translate(0,-15px);-moz-transform:translate(0,-15px);-o-transform:translate(0,-15px);-ms-transform:translate(0,-15px);
+    transition:All 0.4s ease-in-out;-webkit-transition:All 0.4s ease-in-out;-moz-transition:All 0.4s ease-in-out;-o-transition:All 0.4s ease-in-out;
+}
+.swiper-slide .img_desc i.arrow{
+    display: block;
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: solid;
+    border-width: 8px;
+    border-color: transparent transparent #f2f4f5 transparent;
+    position: absolute;
+    left: 0px;
+    right: 0;
+    margin: 0 auto;
+    top: -16px;
+}
+.swiper-slide .img_desc:hover i.arrow{
+    border-color: transparent transparent #ffcf03 transparent;
+    display: block;
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-style: solid;
+    border-width: 8px;
+    position: absolute;
+    left: 0px;
+    right: 0;
+    margin: 0 auto;
+    top: -16px;
+    z-index: 99;
+}
+.swiper-slide .img_desc:hover .img_desc::before{
+    border-color: #fff #fff #ffcf03 #ffffff;
+}
+
+/*section6*/
+
+#section6{
+    background-color: #f2f4f5;
+}
+#section6 .section_inner {
+    padding: 0.7rem 0 5rem 0;
+}
+
+#section6 .section_inner .comment_list {
+    background-color: #ffffff;
+    padding: 0px 0.1rem 0px 0.16rem;
+    width: 6.7rem;
+    margin: 0 auto;
+}
+
+.comment_list li {
+    overflow: hidden;
+    padding: 0.2rem 0.16rem 0.26rem 0;
+    border-top: 1px solid #e8e8e8;
+}
+
+.comment_list li .user_head {
+    display: block;
+    float: left;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    border: 1px solid #e4e4e4;
+}
+
+.comment_list li .comment_info {
+    float: left;
+    width: 5.1rem;
+    margin: 0.14rem 0 0 0.14rem;
+}
+
+.comment_info .user_name {
+    font-size: 0.26rem;
+    color: #333;
+    font-weight: bolder;
+}
+
+.comment_info .opera_time {
+    font-size:0.24rem;
+    color: #CCCCCC;
+    margin-left: 0.1rem;
+}
+
+.comment_info .comment_con {
+    color: #999999;
+    font-size: 0.24rem;
+    line-height: 0.4rem;
+    margin-top: 14px;
+}
+
+.comment_list li .comment_rank {
+    float: right;
+    font-size: 0.24rem;
+    color: #CCCCCC;
+    margin: 6px 3px 0 0;
+}
+
+.comment_area{
+    margin: 0 auto;
+
+}
+.comment_area #comment_text {
+    width: 6.7rem;
+    height: 0.85rem;
+    outline: none;
+    overflow-x: auto;
+    overflow-y: auto;
+    padding: 8px;
+    line-height: 0.4rem;
+    font-family: "微软雅黑";
+    font-size: 0.24rem;
+    resize: none;
+    border: none;
+    border: 1px solid #cccccc;
+}
+
+.publish_comment {
+    width: 7rem;
+    display: block;
+    border: 1px solid #00adee;
+    color: #00adee;
+    margin: 0.16rem  auto 0;
+    text-align: center;
+    padding: 0.18rem 0;
+}
+/*footer*/
+#footer {
+    background: url("../img/footer_img1.png") center no-repeat;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-size: cover;
+    height:2.5rem;
+    z-index: 999;
+}
+
+#footer .handle {
+    position: absolute;
+    display: block;
+    background-color: #ea5903;
+    color: #f2f4f5;
+    width: 2.1rem;
+    text-align: center;
+    padding: 0.1rem 0;
+    right:2.1rem;
+    bottom: 0.1rem;
+    font-size: 0.24rem;
+
+}
+
