@@ -1,0 +1,144 @@
+/*推广达人榜*/
+#rank_wrapper{
+    background-color: #ffcf03;
+}
+.header{
+    width: 7.12rem;
+    height: 3.92rem;
+    margin: 0 auto;
+    background: url("../img/rank_header.png") center no-repeat;
+    background-size: contain;
+    padding: 0.15rem 0;
+}
+#rankList_wrapper{
+    width: 7.12rem;
+    margin: 0 auto;
+    background-color: #ffd627;
+    border-radius: 8px;
+}
+#rankList_wrapper .inner{
+    padding: 0.2rem;
+}
+.list_title{
+    width: 6.7rem;
+    height: 0.76rem;
+    margin: 0 auto;
+    background: url("../img/rank_cobg.png") center no-repeat;
+    background-size: contain;
+    font-size: 0.32rem;
+    text-align: center;
+    line-height: 0.76rem;
+    color: #000000;
+    padding: 0.12rem 0;
+    font-family: "微软雅黑";
+}
+.rankList{
+    background-color: #fff4d8;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 0.1rem;
+}
+.rankList li{
+    overflow: hidden;
+    border-top: 1px solid #e4d5af;
+    width: 6.3rem;
+    margin: 0 auto;
+    padding: 0.15rem 0;
+
+}
+.rankList:first-child(li){
+    border-top: none;
+}
+
+.rankList .rankList_title span{
+    color: #666666;
+}
+
+.rankList_title label{
+    display: inline-block;
+    font-size: 0.26rem;
+    color: #666666;
+}
+
+.rankList_title .coupon_value{
+    text-align: right;
+}
+.rankList_item span{
+    display:inline-block;
+}
+.rankList_item .rank_num span{
+    margin-left: 0.12rem;
+}
+.rankList .rank_num{
+    width: 1.4rem;
+    float: left;
+    text-align: left;
+
+}
+.rankList .rank_user{
+    width: 3.3rem;
+    float: left;
+}
+.rank_user .user_inner{
+    width: 3rem;
+    margin: 0 auto;
+}
+
+.rankList .coupon_value{
+    width: 1.5rem;
+    float: right;
+}
+
+.rankList_item .rank_num{
+    font-size: 0.24rem;
+    margin-top: 0.12rem;
+    background: url("../img/rank_common.png") left no-repeat;
+    background-size: contain;
+    color: #ffffff;
+}
+.rankList_item .rank_num.rank_first{
+    background: url("../img/rank_first.png") left no-repeat;
+    background-size: contain;
+}
+.rankList_item .rank_num.rank_second{
+    background: url("../img/rank_second.png") left no-repeat;
+    background-size: contain;
+}
+.rankList_item .rank_num.rank_third{
+    background: url("../img/rank_third.png") left no-repeat;
+    background-size: contain;
+}
+.rankList_item .rank_user{
+    text-align: left;
+}
+.rankList_item .rank_user img{
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-left: 0.45rem;
+}
+.rankList_item .rank_user .nick_name{
+    color: #333333;
+    font-size: 0.3rem;
+    margin-left: 0.2rem;
+}
+
+
+.rankList_item .coupon_value{
+    color: #00c4ee;
+    font-size:0.3rem;
+    margin-top: 0.12rem;
+}
+.footer .claim{
+    width: 6.8rem;
+    margin: 0 auto;
+    font-size: 0.26rem;
+    color: #655614;
+    padding: 0.3rem 0 0.4rem 0;
+}
+.claim p{
+    width: 6.4rem;
+    float: left;
+    line-height: 0.5rem;
+}
